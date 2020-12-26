@@ -42,11 +42,17 @@ and add it to the end of `basic.sh`:
 
 Then run `basic.sh` to start the machine and install macOS. Remember to partition in Disk Utility first!
 
-## Step 2a (Virtual Machine Manager)
+## Step 2a (Adapting virtual CPU and RAM)
+It is recommended to alloate more CPU cores and RAM to the VM even before first launch if feasible, as the default setting is quite low to accomodate less powerful host machines.
+Documentation on how to do this can be found [here](docs/guide-performance.md).
+
+Note that with the default settings installing and booting the system can take **very** long.
+
+## Step 2b (Virtual Machine Manager)
 1. If instead of QEMU, you'd like to import the setup into Virt-Manager for further configuration, just run `sudo ./make.sh --add`.
 2. After running the above command, add `MyDisk.qcow2` as storage in the properties of the newly added entry for VM.
 
-## Step 2b (Headless Systems)
+## Step 2c (Headless Systems)
 If you're using a cloud-based/headless system, you can use `headless.sh` to set up a quick VNC instance. Settings are defined through variables as seen in the following example. VNC will start on port `5900` by default.
 ```
 HEADLESS=1 MEM=1G CPUS=2 SYSTEM_DISK=MyDisk.qcow2 ./headless.sh
