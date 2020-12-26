@@ -5,6 +5,9 @@ By [@FoxletFox](https://twitter.com/foxletfox), and the help of many others. Fin
 
 New to macOS and KVM? Check [the FAQs.](docs/FAQs.md)
 
+## Notice of fork
+This repo is a fork. The original repo can be found [here](https://github.com/foxlet/macOS-Simple-KVM).
+
 ## Getting Started
 You'll need a Linux system with `qemu` (3.1 or later), `python3`, `pip` and the KVM modules enabled. A Mac is **not** required. Some examples for different distributions:
 
